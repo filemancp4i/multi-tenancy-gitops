@@ -4,6 +4,7 @@ metadata:
   name: ibm-apic-instance
   annotations:
     argocd.argoproj.io/sync-wave: "280"
+    apiconnect-operator/cp4i: "false"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
