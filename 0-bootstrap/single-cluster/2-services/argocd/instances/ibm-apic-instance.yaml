@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: ibm-apic-instance
   annotations:
-    apiconnect-operator/cp4i: "false"
+    argocd.argoproj.io/sync-wave: "280"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
@@ -11,6 +11,8 @@ metadata:
     gitops.tier.layer: services
     gitops.tier.source: git
 spec:
+  disabledServices:
+    dashboard
   syncPolicy:
     automated:
       prune: true
@@ -27,6 +29,8 @@ spec:
           ibmapicinstance:
             name: apic-cluster
             spec:
+              disabledServices:
+                dashboard
               license:
                 accept: true
                 use: production
