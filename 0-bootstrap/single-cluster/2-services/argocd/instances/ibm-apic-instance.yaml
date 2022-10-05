@@ -11,8 +11,6 @@ metadata:
     gitops.tier.layer: services
     gitops.tier.source: git
 spec:
-  disabledServices:
-    dashboard
   syncPolicy:
     automated:
       prune: true
