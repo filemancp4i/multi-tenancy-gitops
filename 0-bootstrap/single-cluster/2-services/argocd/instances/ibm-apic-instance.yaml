@@ -27,8 +27,6 @@ spec:
           ibmapicinstance:
             name: apic-cluster
             spec:
-              disabledServices:
-                dashboard
               license:
                 accept: true
                 use: production
